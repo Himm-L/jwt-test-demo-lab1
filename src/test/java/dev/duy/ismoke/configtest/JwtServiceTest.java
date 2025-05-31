@@ -42,7 +42,7 @@ public class JwtServiceTest {
     }
 
     @Test
-    public void testInvalidToken_WithModifiedToken_ShouldReturnTrue() {
+    public void testInvalidToken_WithModifiedToken_ShouldThrowSignatureException() {
         // Arrange
         String token = jwtService.generateToken(userDetails);
 
